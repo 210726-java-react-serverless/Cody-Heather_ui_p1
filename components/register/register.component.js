@@ -86,6 +86,8 @@ function RegisterComponent() {
         })
             .then(resp => {
                 status = resp.status;
+                let token = resp.headers.get('Authorization');
+                state.token = token;
                 return resp.json();
             })
             .then(payload => {

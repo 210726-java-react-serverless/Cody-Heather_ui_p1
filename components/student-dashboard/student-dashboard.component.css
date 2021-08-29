@@ -1,6 +1,37 @@
 .welcome {
     text-align: center;
+    color:  #4A1266;
+    background-color: #FFD93D;
 }
+
+.nav-pills {
+    display:flex;
+    justify-content: left;
+    margin-right: 0!important;
+    margin-top: 2%!important;
+}
+
+.tab-pane {
+    width: 70rem;
+    height: 45rem;
+    padding: 0.5rem;
+    border: 1em solid #CECDCF;
+    border-radius:2em;
+    display: inline;
+    background-color: white;
+    overflow:scroll;
+}
+
+.tab-pane::-webkit-scrollbar {
+      width: 1em;
+}
+ 
+
+.tab-pane::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
 .nav-link {
     color: #FFD93D!important;
     background-color: #4A1266!important;
@@ -17,4 +48,16 @@
     color: #4A1266!important;
     background-color: #FFD93D!important;
     border-color: #4A1266!important;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+.btn{
+    margin-left:25%;
 }

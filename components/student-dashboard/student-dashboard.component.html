@@ -10,6 +10,8 @@
     </div>
     <div class="tab-content" id="v-pills-tabContent">
       <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+        <h3>My Schedule</h3>
+        <br/>
         <table class="table" id="schedule-table">
           <thead>
           <th>Course Abv</th>
@@ -25,7 +27,7 @@
 
       <div class="tab-pane fade" id="v-pills-enroll" role="tabpanel" aria-labelledby="v-pills-enroll-tab">
         <div class="form-enroll-course">
-          <h1 class="h3 mb-3 fw-normal">Type in the Course Abbreviation of the course you would like to enroll in.</h1>
+          <h3 class="h3 mb-3 fw-normal">Type in the Course Abbreviation of the course you would like to enroll in.</h1>
   
           <div id="abv-container" class="form-floating">
               <input type="abv" class="form-control" id="enroll-form-abv" placeholder="Course Abbreviation">
@@ -33,11 +35,15 @@
           </div>
         
           <br/>
-          <button id="enroll-course-form-button" class="w-100 btn btn-lg btn-primary" type="submit">Enroll Course!</button>
+          <button id="enroll-course-form-button" class="w-50 btn btn-lg btn-primary" type="submit">Enroll in Course!</button>
           
           <div id="enroll-error-msg-container">
             <br/>
             <p hidden id="enroll-error-msg" class="alert alert-danger"></p>
+          </div>
+          <br/>
+          <div id="enroll-success-msg-container">
+            <p hidden id="enroll-success-msg" class="alert alert-success"></p>
           </div>
   
       </div>
@@ -62,7 +68,7 @@
 
       <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
         <div class="form-withdraw-course">
-          <h1 class="h3 mb-3 fw-normal">Which course would you like to withdraw from?</h1>
+          <h3 class="h3 mb-3 fw-normal">Which course would you like to withdraw from?</h1>
   
           <div id="abv-container" class="form-floating">
               <input type="abv" class="form-control" id="withdraw-form-abv" placeholder="Course Abbreviation">
@@ -70,12 +76,18 @@
           </div>
         
           <br/>
-          <button id="withdraw-course-form-button" class="w-100 btn btn-lg btn-primary" type="submit">Withdraw Course!</button>
+          <button id="withdraw-course-form-button" class="w-50 btn btn-lg btn-primary" type="submit">Withdraw from Course!</button>
           <br/>
           <div id="withdraw-error-msg-container">
             <br/>
             <p hidden id="withdraw-error-msg" class="alert alert-danger"></p>
           </div>
+          
+          <br/>
+          <div id="withdraw-success-msg-container">
+            <p hidden id="withdraw-success-msg" class="alert alert-success"></p>
+          </div>
+      
   
       </div>
       </div>

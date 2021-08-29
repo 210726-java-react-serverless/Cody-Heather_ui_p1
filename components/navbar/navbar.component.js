@@ -43,6 +43,7 @@ function NavbarComponent(){
     function logout() {
         console.log('Logging you out!');
         state.authUser = null;
+        state.token = null;
         router.navigate('/login');
     }
 
