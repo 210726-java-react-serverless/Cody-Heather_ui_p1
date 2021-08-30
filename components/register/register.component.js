@@ -11,6 +11,7 @@ function RegisterComponent() {
     let emailFieldElement;
     let usernameFieldElement;
     let passwordFieldElement;
+    let verifypasswordFieldElement;
 
     let registerButtonElement;
     let errorMessageElement;
@@ -20,6 +21,7 @@ function RegisterComponent() {
     let email = '';
     let username = '';
     let password = '';
+    let vpassword ='';
 
     function updateFirstname(e) {
         firstname = e.target.value;
@@ -46,6 +48,11 @@ function RegisterComponent() {
         console.log(password);
     }
 
+    function verifypassword(e) {
+        vpassword = e.target.value;
+        console.log(vpassword);
+    }
+
     function updateErrorMessage(errorMessage) {
         if (errorMessage) {
             errorMessageElement.removeAttribute('hidden');
@@ -65,6 +72,13 @@ function RegisterComponent() {
         } else {
             updateErrorMessage('');
         }
+        if(vpassword != password){
+            updateErrorMessage (`Passwords do not match!`);
+            return;
+        } else {
+            updateErrorMessage('');
+        }
+
 
         let userInfo = {
             firstName: firstname,
@@ -114,6 +128,7 @@ function RegisterComponent() {
             emailFieldElement = document.getElementById('register-form-email');
             usernameFieldElement = document.getElementById('register-form-username');
             passwordFieldElement = document.getElementById('register-form-password');;
+            verifypasswordFieldElement = document.getElementById('register-form-verifypassword');
             registerButtonElement = document.getElementById('register-form-button');;
             errorMessageElement = document.getElementById('error-msg');
 
@@ -122,6 +137,7 @@ function RegisterComponent() {
             emailFieldElement.addEventListener('keyup', updateEmail);
             usernameFieldElement.addEventListener('keyup', updateUsername);
             passwordFieldElement.addEventListener('keyup', updatePassword);
+            verifypasswordFieldElement.addEventListener('keyup', verifypassword);
             registerButtonElement.addEventListener('click', register);
 
             window.history.pushState('register', 'Register', '/register');
